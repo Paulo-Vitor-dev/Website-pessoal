@@ -799,6 +799,11 @@ footer {
         display: block;
     }
 
+    .mobile-menu-icon img{
+        width: 100%;
+        max-height: 50px;
+    }
+
     .mobile-menu-icon button {
         background-color: transparent;
         border: none;
