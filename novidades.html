@@ -13,32 +13,32 @@
 
 <body>
    <header>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">Paulo Vitor Brandão</a>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Paulo Vitor Brandão</a>
+                </div>
+                <div class="nav-menu">
+                    <a href="index.html" class="nav-link ativo">Início</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="projetos.html" class="nav-link">Portifólio</a>
+                    <a href="novidades.html" class="nav-link">Novidades</a>
+                    <a href="contato.html" class="nav-link">Contato</a>
+                </div>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="/img/MENU.png" alt=""></button>
+                </div>
             </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link ativo">Início</a>
-                <a href="sobre.html" class="nav-link">Sobre</a>
-                <a href="projetos.html" class="nav-link">Portifólio</a>
-                <a href="novidades.html" class="nav-link">Novidades</a>
-                <a href="contato.html" class="nav-link">Contato</a>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link-mobile">Início</a></li>
+                    <li><a href="sobre.html" class="nav-link-mobile">Sobre</a></li>
+                    <li><a href="projetos.html" class="nav-link-mobile">Portifólio</a></li>
+                    <li><a href="novidades.html" class="nav-link-mobile">Novidades</a></li>
+                    <li><a href="contato.html" class="nav-link-mobile">Contato</a></li>
+                </ul>
             </div>
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
-            </div>
-        </div>
-         <div class="mobile-menu" >
-            <ul>
-            <li><a href="index.html" class="nav-link ativo">Início</a></li>
-            <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-            <li><a href="projetos.html" class="nav-link">Portifólio</a></li>
-            <li><a href="novidades.html" class="nav-link">Novidades</a></li>
-            <li><a href="contato.html" class="nav-link">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
     </header>
 
     <main>
@@ -102,7 +102,6 @@
         <div class="footer-container">
             <div class="social">
                 <a href="https://github.com/Paulo-Vitor-dev"><i class="fa-brands fa-github"></i></a>
-                <a href="www.linkedin.com/in/paulo-vitor-brandão-de-santana"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/pvbrandao__?igsh=NDdkdDQ2enhzd3ky"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://x.com/pvxssl"><i class="fa-brands fa-twitter"></i></a>
             </div>
@@ -110,6 +109,7 @@
                 <ul>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="projetos.html">Portifólio</a></li>
+                    <li><a href="novidades.html">Novidades</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
@@ -120,7 +120,20 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = '/img/MENU.png';
+    }
+    else { 
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = '/img/FECHAR.png';
+
+    }
+}
+    </script>
 </body>
 
 </html>

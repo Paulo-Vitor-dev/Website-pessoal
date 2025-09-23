@@ -784,11 +784,13 @@ footer {
 .mobile-menu {
     display: none;
 }
+
 /*responsivo*/
 @media screen and (max-width: 830px) {
     .nav-container {
         padding: 1.5rem 4rem;
     }
+
     .nav-link {
         display: none;
     }
@@ -810,9 +812,12 @@ footer {
         padding-bottom: 1rem;
     }
 
-    .mobile-menu .nav-link {
+    .mobile-menu .nav-link-mobile {
         display: block;
         padding-top: 1.2rem;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 500;
     }
 
     .open {

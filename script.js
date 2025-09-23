@@ -1,4 +1,4 @@
-let projetos = [
+    let Projetos = [
     {
         id: 1,
         nome: "Projeto Eccomerce",
@@ -28,14 +28,14 @@ let categoria = "todos"
 
         
 function mostrarprojetos() {
-    let htmlprojetos = ""
+    let htmlProjetos = ""
 
-    projetos.forEach(prd => {
+    Projetos.forEach(prd => {
 
         if (prd.categoria === categoria || categoria === "todos") {
 
 
-            htmlprojetos = htmlprojetos + `
+            htmlProjetos = htmlProjetos + `
             <div class="cartao-projeto">
                 <img src="${prd.imagem}" class="imagem-projeto">
                 <div class="info-projeto">
@@ -47,7 +47,7 @@ function mostrarprojetos() {
             }
         })
 
-        containerprojetos.innerHTML = htmlprojetos
+        containerprojetos.innerHTML = htmlProjetos
 }
 
 mostrarprojetos()

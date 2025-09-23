@@ -31,11 +31,11 @@
             </div>
             <div class="mobile-menu">
                 <ul>
-                    <li><a href="index.html" class="nav-link">Início</a></li>
-                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-                    <li><a href="projetos.html" class="nav-link">Portifólio</a></li>
-                    <li><a href="novidades.html" class="nav-link">Novidades</a></li>
-                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li><a href="index.html" class="nav-link-mobile">Início</a></li>
+                    <li><a href="sobre.html" class="nav-link-mobile">Sobre</a></li>
+                    <li><a href="projetos.html" class="nav-link-mobile">Portifólio</a></li>
+                    <li><a href="novidades.html" class="nav-link-mobile">Novidades</a></li>
+                    <li><a href="contato.html" class="nav-link-mobile">Contato</a></li>
                 </ul>
             </div>
         </nav>
@@ -71,7 +71,6 @@
         <div class="footer-container">
             <div class="social">
                 <a href="https://github.com/Paulo-Vitor-dev"><i class="fa-brands fa-github"></i></a>
-                <a href="www.linkedin.com/in/paulo-vitor-brandão-de-santana"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/pvbrandao__?igsh=NDdkdDQ2enhzd3ky"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://x.com/pvxssl"><i class="fa-brands fa-twitter"></i></a>
             </div>
@@ -79,6 +78,7 @@
                 <ul>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="projetos.html">Portifólio</a></li>
+                    <li><a href="novidades.html">Novidades</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </div>
@@ -88,7 +88,20 @@
             <p>&copy; 2025 Paulo Vitor Brandão. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = '/img/MENU.png';
+    }
+    else { 
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = '/img/FECHAR.png';
+
+    }
+}
+    </script>
 </body>
 
 </html>
